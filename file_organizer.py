@@ -68,13 +68,13 @@ def file_move(source_path, file):
             return
     logs.append(f"{datetime.now()} | MOVE: No matching category for {file}")
 
-logs = []
-log_path = "C:/Users/97250/Devops/logs"
+    
+log_path = check_path_validation("Enter path to store log file")
 if not os.path.exists(log_path):
     os.makedirs(log_path)
-    
 dir_path = check_path_validation("Enter path to working directory: ")
 dir_content = os.listdir(dir_path)
+logs = []
 
 for category in fileFormat:
     subdir_path = os.path.join(dir_path, category)
