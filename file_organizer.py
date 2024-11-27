@@ -69,7 +69,7 @@ def file_move(source_path, file):
     logs.append(f"{datetime.now()} | MOVE: No matching category for {file}")
 
     
-log_path = check_path_validation("Enter path to store log file")
+log_path = check_path_validation("Enter path to store log file: ")
 if not os.path.exists(log_path):
     os.makedirs(log_path)
 dir_path = check_path_validation("Enter path to working directory: ")
